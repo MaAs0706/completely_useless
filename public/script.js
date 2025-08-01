@@ -135,7 +135,7 @@ setInterval(() => {
   if (Math.random() < 0.7) showFakePomodoroAlert();
 }, Math.random() * 60000 + 30000);  // between 30s and 90s
 
-
+// Productivity Stats Section
 const stats = [
   { icon: "📱", label: "Instagram Scrolled Time", value: 15, unit: "hrs" },
   { icon: "🧠", label: "Braincells Lost", value: 27 },
@@ -169,7 +169,7 @@ function animateCount(el, target) {
 }
 
 
-// Productivity Stats Section
+
 function renderStats() {
   grid.innerHTML = ""; // Clear old ones
   const selected = stats
