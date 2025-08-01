@@ -1,0 +1,63 @@
+.quotes-body {
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(45deg, #ffc0cb, #ffea00);
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.quotes-container {
+  background: #fff9;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+  max-width: 600px;
+}
+
+.quotes-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.quotes-container p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.quotes-container button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  background: #222;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.quotes-container button:hover {
+  background: hotpink;
+  color: #000;
+}
+/* Rotating meme background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('https://i.imgur.com/5bHkkpP.jpg'); /* Replace with your own meme tile */
+  background-size: 200px;
+  background-repeat: repeat;
+  opacity: 0.07;
+  z-index: -1;
+  animation: rotateMemeBg 120s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes rotateMemeBg {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
