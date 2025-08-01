@@ -23,6 +23,8 @@ body {
 .hero-content .title {
   font-size: 3rem;
   margin: 0;
+   margin-left: 20px
+  ;
 }
 
 .subtitle {
