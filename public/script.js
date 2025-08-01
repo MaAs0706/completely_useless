@@ -65,9 +65,10 @@ const interval = setInterval(() => {
     clearInterval(interval);
   }
 }, 10000);
+
+// Timer functionality
 let timer = 60;
 let timerInterval = null;
-
 
 document.getElementById("timestart").addEventListener("click", () => {
   let timerStopped = false;
@@ -106,3 +107,30 @@ document.querySelector(".timeend").addEventListener("click", () => {
 
   document.getElementById("timer").innerText = "🛑 Timer stopped";
 });
+
+// fake pomodoro alerts
+const fakePomodoroMessages = [
+  "🚨 You failed this Pomodoro!",
+  "📱 Time to scroll Instagram again!",
+  "😵 Braincell lost detected!",
+  "🥱 Stay distracted. You’re doing amazing.",
+  "🔔 Just one more YouTube short won’t hurt.",
+  "😈 Your focus is a lie.",
+  "🤡 Scheduled distraction in 3…2…1…"
+];
+
+function showFakePomodoroAlert() {
+  const alertBox = document.getElementById("pomodoro-alert");
+  const message = document.getElementById("pomodoro-message");
+  message.innerText = fakePomodoroMessages[Math.floor(Math.random() * fakePomodoroMessages.length)];
+  alertBox.classList.remove("hidden");
+
+  setTimeout(() => {
+    alertBox.classList.add("hidden");
+  }, 4000); // stays for 4 seconds
+}
+
+// Trigger randomly every 30–90 seconds
+setInterval(() => {
+  if (Math.random() < 0.7) showFakePomodoroAlert();
+}, Math.random() * 60000 + 30000);  // between 30s and 90s
