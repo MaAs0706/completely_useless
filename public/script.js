@@ -10,6 +10,7 @@ if (button) {
             "https://www.youtube.com/watch?v=lXMskKTw3Bc", // Crazy Frog
             "https://www.youtube.com/watch?v=j5a0jTc9S10", // Elevator Music
             "https://www.youtube.com/watch?v=ZZ5LpwO-An4", // He-Man Hey Yeah
+            "https://youtu.be/paq6sVkkEg0?si=l8Cl-WVIXx4nzR0N", // Why are you gay 
         ];
         const randomLink = links[Math.floor(Math.random() * links.length)];
         window.location.href = randomLink;
@@ -35,7 +36,7 @@ const randomTodos = [
   "Attempt to balance a spoon on your nose 🥄"
 ];
 
-// Clone the array so we can safely modify it
+// Copy the array so we can remove items as we add them
 let remainingTodos = [...randomTodos];
 
 function addRandomTodo() {
@@ -64,3 +65,26 @@ const interval = setInterval(() => {
     clearInterval(interval);
   }
 }, 10000);
+
+ document.getElementById("timestart").addEventListener("click", () => {let timer = 60;
+
+setInterval(() => {
+  const timerElement = document.getElementById("timer");
+
+  // 20% chance to misbehave
+  const chaos = Math.random();
+
+  if (chaos < 0.05) {
+    timer += Math.floor(Math.random() * 30 - 15); // jump forward/back
+    timerElement.innerText = "Calibrating...";
+  } else if (chaos < 0.1) {
+    timer = 60; // randomly reset
+  } else if (chaos < 0.15) {
+    timer = Math.floor(Math.random() * 1000 - 500); // glitchy value
+  } else {
+    timer--; // normal countdown
+  }
+
+  timerElement.innerText = `⏳ ${timer}s`;
+}, 1000);
+});
