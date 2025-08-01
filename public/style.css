@@ -29,3 +29,55 @@
 .hidden {
   display: none;
 }
+
+
+#meeting-popup {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  border: 2px solid #555;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  z-index: 9999;
+  box-shadow: 0 0 15px red;
+  display: none;
+}
+
+#meeting-popup.show {
+  display: block;
+  animation: popin 0.4s ease;
+}
+
+@keyframes popin {
+  from {
+    opacity: 0;
+    transform: scale(0.7) translate(-50%, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+.popup-content h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #c00;
+}
+
+.popup-content p {
+  margin: 10px 0;
+  font-style: italic;
+}
+
+.popup-content button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}

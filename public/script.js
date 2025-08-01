@@ -196,3 +196,40 @@ function renderStats() {
 // Rotate stats every 15 seconds
 renderStats();
 setInterval(renderStats, 15000);
+
+
+
+const meetingMessages = [
+  "Meeting starting in 3... 2... just kidding.",
+  "Team Sync in 10 min. Or not.",
+  "You’ve been added to a meeting. No escape.",
+  "Meeting scheduled with ‘Yourself’.",
+  "Daily Standup right now. Please stand.",
+  "Zoom is updating... forever.",
+];
+
+function showFakeMeetingPopup() {
+  const popup = document.getElementById('meeting-popup');
+  const message = document.getElementById('popup-message');
+  const randomMessage = meetingMessages[Math.floor(Math.random() * meetingMessages.length)];
+  
+  message.textContent = randomMessage;
+  popup.classList.add('show');
+
+  // Auto-dismiss after 10 seconds (optional)
+  setTimeout(() => {
+    dismissPopup();
+  }, 10000);
+}
+
+function dismissPopup() {
+  const popup = document.getElementById('meeting-popup');
+  popup.classList.remove('show');
+}
+
+// Trigger randomly every 30–60 seconds
+setInterval(() => {
+  if (Math.random() > 0.5) {
+    showFakeMeetingPopup();
+  }
+}, Math.random() * 30000 + 30000); // 30s–60s range
