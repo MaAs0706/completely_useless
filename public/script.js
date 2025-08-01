@@ -65,26 +65,44 @@ const interval = setInterval(() => {
     clearInterval(interval);
   }
 }, 10000);
+let timer = 60;
+let timerInterval = null;
 
- document.getElementById("timestart").addEventListener("click", () => {let timer = 60;
 
-setInterval(() => {
+document.getElementById("timestart").addEventListener("click", () => {
+  let timerStopped = false;
+  if (timerInterval !== null || timerStopped) return; // Prevent multiple intervals
+
   const timerElement = document.getElementById("timer");
 
-  // 20% chance to misbehave
-  const chaos = Math.random();
+  timerInterval = setInterval(() => {
+    if (timerStopped) return;
 
-  if (chaos < 0.05) {
-    timer += Math.floor(Math.random() * 30 - 15); // jump forward/back
-    timerElement.innerText = "Calibrating...";
-  } else if (chaos < 0.1) {
-    timer = 60; // randomly reset
-  } else if (chaos < 0.15) {
-    timer = Math.floor(Math.random() * 1000 - 500); // glitchy value
-  } else {
-    timer--; // normal countdown
+    const chaos = Math.random();
+
+    if (chaos < 0.05) {
+      timer += Math.floor(Math.random() * 30 - 15);
+      timerElement.innerText = "Calibrating...";
+    } else if (chaos < 0.1) {
+      timer = 60;
+    } else if (chaos < 0.15) {
+      timer = Math.floor(Math.random() * 1000 - 500);
+    } else {
+      timer--;
+    }
+
+    timerElement.innerText = `⏳ ${timer}s`;
+
+  }, 1000);
+});
+
+document.querySelector(".timeend").addEventListener("click", () => {
+  timerStopped = true;
+
+  if (timerInterval !== null) {
+    clearInterval(timerInterval);
+    timerInterval = null;
   }
 
-  timerElement.innerText = `⏳ ${timer}s`;
-}, 1000);
+  document.getElementById("timer").innerText = "🛑 Timer stopped";
 });
