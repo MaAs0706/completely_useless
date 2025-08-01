@@ -134,3 +134,65 @@ function showFakePomodoroAlert() {
 setInterval(() => {
   if (Math.random() < 0.7) showFakePomodoroAlert();
 }, Math.random() * 60000 + 30000);  // between 30s and 90s
+
+
+const stats = [
+  { icon: "📱", label: "Instagram Scrolled Time", value: 15, unit: "hrs" },
+  { icon: "🧠", label: "Braincells Lost", value: 27 },
+  { icon: "💤", label: "Micro-Naps Taken", value: 9 },
+  { icon: "🎯", label: "Focus Sessions", value: 12 },
+  { icon: "😵‍💫", label: "Fake Productivity Bursts", value: 18 },
+  { icon: "📺", label: "YouTube Hours", value: 23 },
+  { icon: "🚨", label: "Distractions Defeated", value: 0 },
+  { icon: "⏱️", label: "Timer Resets", value: 36 },
+  { icon: "🤡", label: "Meetings Attended Mentally", value: 1 },
+  { icon: "📖", label: "Tabs Opened With Good Intentions", value: 99 },
+  { icon: "📴", label: "Pomodoros Ignored", value: 12 },
+  { icon: "📵", label: "App Blocks Bypassed", value: 7 }
+];
+
+const grid = document.getElementById("stats-grid");
+
+function animateCount(el, target) {
+  let count = 0;
+  const increment = target / 50;
+  const update = () => {
+    count += increment;
+    if (count >= target) {
+      el.innerText = Math.floor(target);
+    } else {
+      el.innerText = Math.floor(count);
+      requestAnimationFrame(update);
+    }
+  };
+  update();
+}
+
+
+// Productivity Stats Section
+function renderStats() {
+  grid.innerHTML = ""; // Clear old ones
+  const selected = stats
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 6); // Show 6 at a time
+
+  selected.forEach(stat => {
+    const card = document.createElement("div");
+    card.className = "stat-card";
+
+    card.innerHTML = `
+      <div class="stat-icon">${stat.icon}</div>
+      <div class="stat-value" data-value="${stat.value}">0</div>
+      <div class="stat-label">${stat.label}</div>
+    `;
+
+    grid.appendChild(card);
+
+    const valEl = card.querySelector(".stat-value");
+    animateCount(valEl, stat.value);
+  });
+}
+
+// Rotate stats every 15 seconds
+renderStats();
+setInterval(renderStats, 15000);
