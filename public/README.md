@@ -9,7 +9,7 @@
 
 
 ### Team Members
-- Team Lead: Aswanth - Model Engineering College
+- Team Lead: Aswanth Madhav - Model Engineering College
 
 
 ### Project Description
