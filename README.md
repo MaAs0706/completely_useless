@@ -41,8 +41,8 @@ For Software:
 ### Implementation
 For Software:
 # Installation
-git clone https://github.com/aswanthmadav/ProcrastiMate.git
-cd ProcrastiMate
+git clone https://github.com/MaAs0706/completely_useless
+cd completely_useless
 open hero.html
 
 # Run
@@ -52,13 +52,13 @@ Just open hero.html in a browser. We believe in ✨ low effort ✨.
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1] ![alt text](<hero page.png>)
+![Screenshot1] ![alt text](<heropage.png>)
 Time flies when you’re pretending to work.
 
 ![Screenshot2]![alt text](index.png)
 THis is where you can hallucinate that you are working , or aybe show your parents you are . 
 
-![Screenshot3]![alt text](<3rd page.png>)
+![Screenshot3]![alt text](<3rdpage.png>)
 Highly motivating quotes 
 
 # Diagrams
