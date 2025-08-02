@@ -1,40 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anti-Productivity Suite</title>
-  <link rel="stylesheet" href="hero.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti Productivity Suite</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Anti Productivity Suite</h1>
+    <button class="focus" id="focus">Focus Session</button>
+    <ul id="todo-list">
+        <li>To do list</li>
+    </ul>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1 class="title">💥 ProcrastiMate</h1>
-      <p class="subtitle">Get distracted like a PRO™️</p>
-      <p class="tagline">Because crushing your goals is overrated.</p>
-      <a href="index.html" class="cta">Ruin My Focus</a>
+    <!--Timer Countdown -->
+    <div class="countdown">
+     <button class="timeend">Stop timer</button>   
+     <button class="timestart" id="timestart">Start Timer</button>
+     <div class="timer" id="timer">60s</div>
     </div>
-    <div class="hero-image">
-      <img src="https://toggl.com/blog/wp-content/uploads/2019/09/unnamed-7.png" alt="Meme Productivity" />
-    </div>
-  </section>
 
-  <section class="features">
-    <h2>🧠 Features You Never Needed</h2>
-    <div class="features-grid">
-      <div class="feature">⏰ Chaotic Timer</div>
-      <div class="feature">📋 Repeating To-Dos (Oops)</div>
-      <div class="feature">🔔 Fake Pomodoro Alerts</div>
-      <div class="feature">📉 Productivity Stats (Lies)</div>
-      <div class="feature">🔊 Distracting Sounds</div>
-      <div class="feature">🧍 Meeting Popups That Go Nowhere</div>
+    <!--Pomodoro alert -->
+    <div id="pomodoro-alert" class="pomodoro-alert hidden">
+    <p id="pomodoro-message">You're doing great!</p>
     </div>
-  </section>
 
-  <footer>
-    <p>🚫 Built to waste your time – 2025</p>
-  </footer>
+    <!-- Productivity Stats -->
+    <div id="productivity-stats" class="stats-panel">
+    <h2 class="dashboard-title">🧠 Productivity Stats</h2>
+    <div class="stats-grid" id="stats-grid">
+    
+    </div>
+    
+</div>
+
+<!-- Fake Meeting Popup Container -->
+<div id="meeting-popup" class="hidden">
+  <div class="popup-content">
+    <h3>📞 Zoom Meeting Alert</h3>
+    <p id="popup-message">Meeting starting in 3... 2... just kidding.</p>
+    <button onclick="dismissPopup()">Dismiss</button>
+  </div>
+</div>
+
+<a href="motivatio.html">
+  <button class="meme-btn">✨ Get Motivated</button>
+</a>
+<div class="bubble-container">
+  <div class="bubble" style="--size: 60px; --left: 10%"></div>
+  <div class="bubble" style="--size: 40px; --left: 25%"></div>
+  <div class="bubble" style="--size: 80px; --left: 50%"></div>
+  <div class="bubble" style="--size: 30px; --left: 70%"></div>
+  <div class="bubble" style="--size: 50px; --left: 90%"></div>
+  <div class="bubble" style="--size: 60px; --left: 10%"></div>
+  <div class="bubble" style="--size: 40px; --left: 25%"></div>
+  <div class="bubble" style="--size: 80px; --left: 50%"></div>
+  <div class="bubble" style="--size: 30px; --left: 70%"></div>
+  <div class="bubble" style="--size: 50px; --left: 90%"></div>
+</div>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
