@@ -70,7 +70,8 @@ When you press the start button on the hero page , it redirects you to the main 
 
 ### Project Demo
 # Video
-<video controls src="demo.mov" title="Title"></video>
+https://youtu.be/rEIOjyGuVs4
+
 So it all starts with you looking at the hero page , which you might thing i repeat might think that the meme is good , and there is a button screaming at you to click it , then you are redirected to the main page where you see the stairs to heaven of productivity , the focus session , a timer , productivity stats , quotes , to do list , what else could you need , the only thing is they wont work as you intend them to , so basically useless , but is it ? and then you redirected to the motivational quotes page, which will motivate you to do nothing , and again five star wins . 
 
 
