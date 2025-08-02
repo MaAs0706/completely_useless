@@ -6,11 +6,13 @@ if (button) {
         console.log("Button works!");
         const links = [
             "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Rickroll
-            "https://www.youtube.com/watch?v=9Deg7VrpHbM", // Nyan Cat
-            "https://www.youtube.com/watch?v=lXMskKTw3Bc", // Crazy Frog
+            "https://youtube.com/shorts/sQjMZ-PpBPw?si=VeViR6dVbLrr2jOM", // achaaa theeke
+            "https://youtube.com/shorts/vN-gjjOLNf8?si=ssbLJ4preHXVL0B4", // kitne tejaswi 
             "https://www.youtube.com/watch?v=j5a0jTc9S10", // Elevator Music
-            "https://www.youtube.com/watch?v=ZZ5LpwO-An4", // He-Man Hey Yeah
+            "https://youtube.com/shorts/FOfUJhC4RnA?si=OVUXbE706DeewXgP", // 7 crore
             "https://youtu.be/paq6sVkkEg0?si=l8Cl-WVIXx4nzR0N", // Why are you gay 
+            "https://youtube.com/shorts/YKRQoJDNULU?si=gUIow6lN3H4QK7qT", // kon hai ye log 
+            "https://youtube.com/shorts/4-wTdMDjF04?si=QzdUxBHIskmHdEp6" , //aeyy
         ];
         const randomLink = links[Math.floor(Math.random() * links.length)];
         window.location.href = randomLink;
@@ -24,15 +26,15 @@ if (button) {
 const todoList = document.getElementById("todo-list");
 
 const randomTodos = [
-  "Organize your sock drawer by color 🧦",
-  "Google 'How to pet a shark' 🦈",
-  "Rewatch that one meme for the 10th time 🤣",
-  "Scroll through 2019 Instagram posts 📱",
-  "Start learning how to fly a ufo 🛸",
-  "Build a pillow fort 🏰",
-  "Search for your kitchen cleaner online 🕵️",
-  "Make a playlist for your cat 🐱",
-  "Count how many tabs you have open 🔍",
+  "Aggressively blink at the ceiling until it blinks back",
+  "Microwave ice cubes to assert dominance",
+  "Set an alarm to remind yourself to ignore alarms ⏰",
+  "Convince a spoon it’s a fork 🍴(improves debating skills)",
+  "Hide from your responsibilities in the fridge",
+  "Text yourself “we need to talk” and leave it unread",
+  "Write a haiku about your last braincell 🧠",
+  "Attempt to learn telepathy by glaring really hard at your wall (Trust me it helps)",
+  "Declare war on a chair that squeaked too loud",
   "Attempt to balance a spoon on your nose 🥄"
 ];
 
